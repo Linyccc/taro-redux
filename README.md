@@ -1,2 +1,2 @@
 # taro-redux
-taro+redux+自定义request（遮罩、页面弹窗等二次封装）
+taro+redux+自定义request（遮罩、请求失败提示框等二次封装）
