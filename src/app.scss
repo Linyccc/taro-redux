@@ -1,0 +1,24 @@
+@import "~taro-ui/dist/style/index.scss";
+
+// 自定义全局样式
+.margin-right-small {
+  margin-right: 12rpx;
+}
+.margin-right-df {
+  margin-right: 24rpx;
+}
+.margin-right-lg {
+  margin-right: 48rpx;
+}
+.gb-bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  min-height: 100rpx;
+  justify-content: space-between;
+  .action {
+    margin-left: 24rpx;
+    font-size: 24rpx;
+    margin-right: 24rpx;
+  }
+}
