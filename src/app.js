@@ -18,7 +18,12 @@ const store = configStore();
 
 class App extends Component {
   config = {
-    pages: ["pages/index/index", "pages/doList/index", "pages/doneList/index"],
+    pages: [
+      "pages/index/index",
+      "pages/cart/index",
+      "pages/user/index",
+      "pages/list/index"
+    ],
     window: {
       backgroundTextStyle: "light",
       navigationBarBackgroundColor: "#fff",
@@ -38,16 +43,22 @@ class App extends Component {
           selectedIconPath: "./assets/image/home1.png"
         },
         {
-          pagePath: "pages/doList/index",
-          text: "待办列表",
-          iconPath: "./assets/image/active.png",
-          selectedIconPath: "./assets/image/active1.png"
+          pagePath: "pages/list/index",
+          text: "分类",
+          iconPath: "./assets/image/apps.png",
+          selectedIconPath: "./assets/image/apps1.png"
         },
         {
-          pagePath: "pages/doneList/index",
-          text: "已办列表",
-          iconPath: "./assets/image/info.png",
-          selectedIconPath: "./assets/image/info1.png"
+          pagePath: "pages/cart/index",
+          text: "购物车",
+          iconPath: "./assets/image/cart.png",
+          selectedIconPath: "./assets/image/cart1.png"
+        },
+        {
+          pagePath: "pages/user/index",
+          text: "我的",
+          iconPath: "./assets/image/my.png",
+          selectedIconPath: "./assets/image/my1.png"
         }
       ]
     }

@@ -1,7 +1,8 @@
-import { ListData } from "../constants/counter";
+import { ListData, RecommendList } from "../constants/counter";
 
 const initstate = {
-  list: []
+  list: [],
+  recommendList: []
 };
 
 export default function counter(state = initstate, action) {
@@ -10,6 +11,12 @@ export default function counter(state = initstate, action) {
       return {
         ...state,
         list: action.list
+      };
+      break;
+    case RecommendList:
+      return {
+        ...state,
+        recommendList: action.recommendlist
       };
       break;
     default:

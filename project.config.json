@@ -2,12 +2,15 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "myApp",
 	"description": "taroAnReadux",
-	"appid": "touristappid",
+	"appid": "wx8a9313dbc108fb75",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
-		"minified": false
+		"minified": false,
+		"newFeature": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",

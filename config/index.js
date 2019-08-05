@@ -17,7 +17,8 @@ const config = {
     "@/utils": path.resolve(__dirname, "..", "src/utils"),
     "@/actions": path.resolve(__dirname, "..", "src/actions"),
     "@/reducers": path.resolve(__dirname, "..", "src/reducers"),
-    "@/components": path.resolve(__dirname, "..", "src/components")
+    "@/components": path.resolve(__dirname, "..", "src/components"),
+    "@/styles": path.resolve(__dirname, "..", "src/styles")
   },
   plugins: {
     babel: {
@@ -62,7 +63,7 @@ const config = {
           }
         },
         cssModules: {
-          enable: false, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
           config: {
             namingPattern: "module", // 转换模式，取值为 global/module
             generateScopedName: "[name]__[local]___[hash:base64:5]"
