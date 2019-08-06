@@ -25,7 +25,7 @@ class Index extends Component {
 
   render() {
     const { list } = this.props;
-    const content = null;
+    let content = null;
     if (list && list.length > 0) {
       content = list.map((item, index) => {
         let key = index;

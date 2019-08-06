@@ -1,8 +1,8 @@
 Arguments: 
-  D:\node.js\node.exe E:\Yarn\bin\yarn.js add @/components/Empty --silent --no-progress
+  D:\node.js\node.exe E:\Yarn\bin\yarn.js add @assets/default-avatar.png --silent --no-progress
 
 PATH: 
-  C:\Users\Linye\AppData\Roaming\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\Weixin\taro\myApp\node_modules\.bin;C:\Users\Linye\AppData\Roaming\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\Weixin\taro\myApp\node_modules\.bin;E:\jdk\jdk1.8.0_101\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\git\Git\cmd;E:\svn\bin;E:\SVN\TortoiseSVN\bin;E:\jdk\jdk1.8.0_101\bin;;E:\Microsoft VS Code\bin;D:/maven/apache-maven-3.5.2/bin;E:\Yarn\bin\;D:\node.js\;C:\Users\Linye\AppData\Local\atom\bin;E:\Microsoft VS Code\bin;E:\fiddler;C:\Users\Linye\AppData\Local\Yarn\bin;C:\Users\Linye\AppData\Roaming\npm
+  C:\Users\Linye\AppData\Roaming\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\Weixin\github\taro-redux\node_modules\.bin;C:\Users\Linye\AppData\Roaming\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;D:\Weixin\github\taro-redux\node_modules\.bin;E:\jdk\jdk1.8.0_101\jre\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\git\Git\cmd;E:\svn\bin;E:\SVN\TortoiseSVN\bin;E:\jdk\jdk1.8.0_101\bin;;E:\Microsoft VS Code\bin;D:/maven/apache-maven-3.5.2/bin;E:\Yarn\bin\;D:\node.js\;C:\Users\Linye\AppData\Local\atom\bin;E:\Microsoft VS Code\bin;E:\fiddler;C:\Users\Linye\AppData\Local\Yarn\bin;C:\Users\Linye\AppData\Roaming\npm
 
 Yarn version: 
   1.16.0
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/@%2fcomponents/Empty: Not found
+  Error: https://registry.npm.taobao.org/@assets%2fdefault-avatar.png: Not found
       at Request.params.callback [as _callback] (E:\Yarn\lib\cli.js:65200:18)
       at Request.self.callback (E:\Yarn\lib\cli.js:129590:22)
       at Request.emit (events.js:198:13)

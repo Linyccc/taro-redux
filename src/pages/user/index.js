@@ -1,7 +1,10 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text, Button } from "@tarojs/components";
+import { View, Text, Button, ScrollView } from "@tarojs/components";
 import { AtList, AtListItem } from "taro-ui";
+import Profile from "./profile/index";
+import Activity from "./activity/index";
 import styles from "./index.module.scss";
+import { getWindowHeight } from "@/utils/style";
 
 class Index extends Component {
   constructor(props) {
@@ -12,7 +15,7 @@ class Index extends Component {
   }
 
   config = {
-    navigationBarTitleText: "用户页"
+    navigationBarTitleText: "个人中心"
   };
 
   componentDidMount() {}
@@ -20,7 +23,17 @@ class Index extends Component {
   componentWillReceiveProps(nextProps) {}
 
   render() {
-    return <View>用户</View>;
+    const userInfo = "";
+    return (
+      <View className={styles.user}>
+        <ScrollView scrollY style={{ height: getWindowHeight() }}>
+          <Profile userInfo={userInfo} />
+        </ScrollView>
+        <View className={styles.user_activity}>
+          <Activity />
+        </View>
+      </View>
+    );
   }
 }
 
