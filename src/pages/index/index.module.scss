@@ -7,9 +7,21 @@
   }
 }
 .active {
-  padding: 16px 0px;
+  padding: 32px 0px 16px 0px;
   image {
     width: 100%;
     height: 220px;
   }
+}
+.enter_list {
+  padding: 0 16px;
+}
+.list_img {
+  width: 64px;
+  height: 64px;
+  margin: 16px auto 0;
+}
+.list_title {
+  line-height: 24rpx;
+  font-size: 24rpx;
 }

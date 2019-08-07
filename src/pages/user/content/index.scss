@@ -1,0 +1,21 @@
+@import "../../../styles/theme.scss";
+
+.user-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  padding: 140px 0 50px;
+}
+
+.user-empty_img {
+  width: 200px;
+  height: 170px;
+}
+
+.user-empty_txt {
+  margin-top: 24px;
+  color: $text-color-lighter;
+  font-size: 24px;
+  line-height: 24px;
+}

@@ -146,7 +146,7 @@ class Index extends Component {
         </Swiper>
         <HomeTitle title="专属权益" link="#" />
         <AtGrid
-          mode="rect"
+          columnNum="4"
           hasBorder={false}
           data={[
             {
@@ -178,6 +178,16 @@ class Index extends Component {
               image:
                 "https://img30.360buyimg.com/jdphoto/s72x72_jfs/t5770/97/5184449507/2423/294d5f95/595c3b4dNbc6bc95d.png",
               value: "品牌清仓"
+            },
+            {
+              image:
+                "https://img12.360buyimg.com/jdphoto/s72x72_jfs/t6160/14/2008729947/2754/7d512a86/595c3aeeNa89ddf71.png",
+              value: "福利中心"
+            },
+            {
+              image:
+                "https://img20.360buyimg.com/jdphoto/s72x72_jfs/t15151/308/1012305375/2300/536ee6ef/5a411466N040a074b.png",
+              value: "领取红包"
             }
           ]}
         />
