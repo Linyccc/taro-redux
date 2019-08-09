@@ -1,2 +1,6 @@
 # taro-redux
-taro+redux+自定义request（遮罩、请求失败提示框等二次封装）
+
+1. 技术栈
+   taro + redux + scss + es6
+2. 登录账号
+   账户：admin 密码：123
