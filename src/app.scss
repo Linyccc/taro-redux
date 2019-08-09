@@ -11,3 +11,41 @@
 .margin-right-lg {
   margin-right: 48px;
 }
+
+.margin-bottom-small {
+  margin-bottom: 16px;
+}
+.margin-bottom-df {
+  margin-bottom: 24px;
+}
+.margin-bottom-lg {
+  margin-bottom: 48px;
+}
+
+.margin-top-small {
+  margin-top: 16px;
+}
+.margin-top-df {
+  margin-top: 24px;
+}
+.margin-top-lg {
+  margin-top: 48px;
+}
+
+// 重置button-primary  Button-hover 主要原因 taro-ui 的atButton 不能对表单进行submit
+.button_primary {
+  color: #fff;
+  background: #6190e8;
+  height: 92rpx;
+  font-size: 32rpx;
+  line-height: 90rpx;
+}
+.button-hover {
+  background: #a0bcf1 !important;
+}
+
+// 重置at-grid 的字体大小
+
+.at-grid__flex .content-inner__text {
+  font-size: 24px;
+}

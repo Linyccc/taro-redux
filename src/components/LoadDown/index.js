@@ -30,7 +30,7 @@ export default class LoadMore extends Component {
               <AtActivityIndicator
                 size={15}
                 color="#2d8cf0"
-                content="loading..."
+                content="加载中..."
               />
             </View>
           );

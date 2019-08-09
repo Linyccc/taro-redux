@@ -1,5 +1,8 @@
 @import "../../../styles/theme.scss";
 
+.padding-l-r {
+  padding: 0 16px;
+}
 .user-empty {
   display: flex;
   flex-direction: column;

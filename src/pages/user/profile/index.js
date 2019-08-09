@@ -1,5 +1,6 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, Text, Image } from "@tarojs/components";
+import { AtTag, AtIcon } from "taro-ui";
 import defaultAvatar from "@/assets/image/default-avatar.png";
 import Vip from "./vip";
 import bg from "./assets/bg.png";
@@ -8,27 +9,20 @@ import level01 from "./assets/level-01.png";
 import "./index.scss";
 
 export default class Profile extends Component {
-  static defaultProps = {
-    userInfo: {}
-  };
+  static defaultProps = {};
 
   handleLogin = () => {
-    console.log("1");
-    // if (!this.props.userInfo.login) {
-    //   Taro.navigateTo({
-    //     url: '/pages/user-login/user-login'
-    //   })
-    // }
+    if (!this.props.userInfo.login) {
+      Taro.navigateTo({
+        url: "/pages/login/emailLogin/index"
+      });
+    }
   };
 
-  getUid = uid => {
-    if (!uid || !/@/.test(uid)) {
-      return "";
-    }
-    const [username, suffix] = uid.split("@");
-    const firstLetter = username[0];
-    const lastLetter = username[username.length - 1];
-    return `${firstLetter}****${lastLetter}@${suffix}`;
+  changeUser = () => {
+    Taro.navigateTo({
+      url: "/pages/login/emailLogin/index"
+    });
   };
 
   render() {
@@ -56,9 +50,11 @@ export default class Profile extends Component {
               <View className="user-profile__info-wrap">
                 {/* XXX 没有全部 level 对应的图标，暂时都用 v1 */}
                 <Image className="user-profile__info-level" src={level01} />
-                <Text className="user-profile__info-uid">
-                  {this.getUid(userInfo.uid)}
-                </Text>
+                <View className="user-profile__info-uid">
+                  <AtTag type="primary" circle size="small">
+                    {userInfo.uid}
+                  </AtTag>
+                </View>
               </View>
             ) : (
               <Text className="user-profile__info-tip">点击登录账号</Text>
@@ -67,7 +63,13 @@ export default class Profile extends Component {
 
           <View className="user-profile__extra">
             <View className="user-profile__extra-qr">
-              <Image className="user-profile__extra-qr-img" src={qrCode} />
+              {userInfo.login ? (
+                <View onClick={this.changeUser}>
+                  <AtIcon value="repeat-play" size="16" color="#333" />
+                </View>
+              ) : (
+                <Image className="user-profile__extra-qr-img" src={qrCode} />
+              )}
             </View>
           </View>
 

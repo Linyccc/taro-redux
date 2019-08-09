@@ -2,6 +2,8 @@ import Taro, { Component } from "@tarojs/taro";
 import { View, Button, Text, Image } from "@tarojs/components";
 import { AtIcon, AtGrid, AtTag } from "taro-ui";
 import "./recommend.scss";
+import { connect } from "@tarojs/redux";
+import { keepItem } from "@/actions/counter";
 
 class Index extends Component {
   constructor(props) {
@@ -17,11 +19,13 @@ class Index extends Component {
   //   });
   // }
 
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
+  detail = item => {
+    const { dispatch } = this.props;
+    dispatch(keepItem(item));
+    Taro.navigateTo({
+      url: `/pages/item/index`
+    });
+  };
 
   render() {
     const { list } = this.props;
@@ -30,21 +34,29 @@ class Index extends Component {
       content = list.map((item, index) => {
         let key = index;
         return (
-          <View className="home-recommend__list-item" key={key}>
+          <View
+            className="home-recommend__list-item"
+            key={key}
+            onClick={this.detail.bind(this, item)}
+          >
             <Image className="home-recommend__list-item-img" src={item.image} />
             <View className="home-recommend__list-item-title">
               {item.title}
             </View>
             {item.label.length > 0 ? (
               <View className="home-recommend__list-item-label">
-                {item.label.map(function(item1, number) {
+                {item.label.map((item1, number) => {
+                  const key = number;
                   return (
-                    <View
-                      className="home-recommend__list-item-label-item"
-                      key={number}
-                    >
+                    // <View
+                    //   className="home-recommend__list-item-label-item"
+                    //   key={key}
+                    // >
+                    //   {item1}
+                    // </View>
+                    <AtTag type="primary" circle size="small">
                       {item1}
-                    </View>
+                    </AtTag>
                   );
                 })}
               </View>
@@ -78,4 +90,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default connect(({ counter }) => ({}))(Index);

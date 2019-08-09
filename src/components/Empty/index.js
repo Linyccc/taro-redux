@@ -1,7 +1,7 @@
 import Taro, { Component } from "@tarojs/taro";
 import PropTypes from "prop-types";
 import { View, Image, Text } from "@tarojs/components";
-import octocat from "@/assets/image/octocat.png";
+import octocat from "@/assets/image/notData.png";
 
 import "./empty.scss";
 

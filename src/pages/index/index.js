@@ -116,7 +116,7 @@ class Index extends Component {
     if (list.length > 0) {
       recommend = <Recommend list={this.state.list} />;
     } else {
-      recommend = <Empty />;
+      recommend = <Empty content="数据失联了~" />;
     }
     return (
       <View>
