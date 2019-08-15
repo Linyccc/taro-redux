@@ -1,0 +1,138 @@
+@import "../../../styles/theme.scss";
+
+.footer_item {
+  height: 100%;
+  text-align: center;
+  display: flex;
+}
+.footer_item_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0 solid #dddddd;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  flex: 1;
+}
+.footer_item_nav_gobuy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0 solid #dddddd;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  flex: 2;
+}
+.footer_item_nav_gocart {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0 solid #ab2b2b;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  background: #ab2b2b;
+  flex: 2;
+}
+
+.footer_cart_text {
+  color: #ffffff;
+  font-size: 28px;
+  line-height: 28px;
+}
+.image {
+  width: 40px;
+  height: 40px;
+}
+.footer_text {
+  color: #333333;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+.floatLayout {
+  .floatLayout_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    .image {
+      margin-right: 24px;
+      width: 180px;
+      height: 180px;
+      background: #fafafa;
+      border-radius: 4px;
+    }
+    .floatLayout_info_wrap {
+      display: flex;
+      flex-direction: column;
+      padding-top: 80px;
+      .floatLayout_info_wrap_price {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .currentPrice {
+          color: #ab2b2b;
+          font-size: 32px;
+          line-height: 32px;
+        }
+        .currentPrePrice {
+          margin-left: 8px;
+          color: #999999;
+          font-size: 24px;
+          line-height: 24px;
+          text-decoration: line-through;
+          text-decoration-color: #999999;
+        }
+      }
+      .floatLayout_info_wrap_tip {
+        display: flex;
+        flex-direction: row;
+        margin-top: 8px;
+        .currentType {
+          font-size: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .floatLayout_group {
+    padding: 0px 16px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    .floatLayout_group_title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .floatLayout_group_list {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  .floatLayout_group_number {
+    display: flex;
+    flex-direction: row;
+    margin-top: 48px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 16px;
+  }
+  .confirmButton {
+    padding: 16px;
+    button {
+      color: #fff;
+      background: #6190e8;
+      height: 80px;
+      font-size: 32px;
+      line-height: 80px;
+    }
+  }
+}

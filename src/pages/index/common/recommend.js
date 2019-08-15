@@ -48,13 +48,7 @@ class Index extends Component {
                 {item.label.map((item1, number) => {
                   const key = number;
                   return (
-                    // <View
-                    //   className="home-recommend__list-item-label-item"
-                    //   key={key}
-                    // >
-                    //   {item1}
-                    // </View>
-                    <AtTag type="primary" circle size="small">
+                    <AtTag type="primary" circle size="small" key={key}>
                       {item1}
                     </AtTag>
                   );

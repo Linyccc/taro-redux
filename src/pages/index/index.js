@@ -18,7 +18,7 @@ import { queryRecommend } from "@/actions/counter";
 import swiper1 from "../../assets/image/swiper1.jpg";
 import swiper2 from "../../assets/image/swiper2.jpg";
 import swiper3 from "../../assets/image/swiper3.jpg";
-import active from "../../assets/image/active.gif";
+
 class Index extends Component {
   config = {
     navigationBarTitleText: "首页",
@@ -192,9 +192,9 @@ class Index extends Component {
           ]}
         />
 
-        <View className={styles.active}>
+        {/* <View className={styles.active}>
           <Image src={active} />
-        </View>
+        </View> */}
         {recommend}
         {showDown && <LoadDown status={status} />}
         {/* <Recommend list={this.state.list} /> */}

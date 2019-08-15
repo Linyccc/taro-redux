@@ -1,4 +1,10 @@
-import { LISTDATA, RECOMMENDLIST, LOGIN, KEEPITEM } from "../constants/counter";
+import {
+  LISTDATA,
+  RECOMMENDLIST,
+  LOGIN,
+  KEEPITEM,
+  CARTLIST
+} from "../constants/counter";
 import request from "../utils/request/index";
 // 同步
 export const listData = list => {
@@ -26,6 +32,13 @@ export const keepItem = value => {
   return {
     type: KEEPITEM,
     itemData: value
+  };
+};
+
+export const cartlist = value => {
+  return {
+    type: CARTLIST,
+    cartList: value
   };
 };
 
@@ -69,5 +82,18 @@ export function login(params) {
       value = 1;
     }
     dispatch(keepLogin(value));
+  };
+}
+// 添加购物车
+export function setCartlist(data, currentData, currentName, currentId, number) {
+  let value = {};
+  return dispatch => {
+    value.data = data;
+    value.currentData = currentData;
+    value.currentName = currentName;
+    value.currentId = currentId;
+    value.number = number;
+    value.checked = true;
+    dispatch(cartlist(value));
   };
 }

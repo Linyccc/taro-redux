@@ -36,9 +36,9 @@
 .button_primary {
   color: #fff;
   background: #6190e8;
-  height: 92rpx;
-  font-size: 32rpx;
-  line-height: 90rpx;
+  height: 92px;
+  font-size: 32px;
+  line-height: 90px;
 }
 .button-hover {
   background: #a0bcf1 !important;
@@ -48,4 +48,8 @@
 
 .at-grid__flex .content-inner__text {
   font-size: 24px;
+}
+// 重置floatLayout的弹窗高度
+.at-float-layout__container {
+  height: 800px !important;
 }
