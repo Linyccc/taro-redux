@@ -12,13 +12,12 @@ import styles from "./index.module.scss";
 import { connect } from "@tarojs/redux";
 import { keepItem } from "@/actions/counter";
 import Empty from "../empty";
-import noMoney from "@/assets/image/noMoney.jpg";
+
 class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      list: [],
-      isOpened: false
+      list: []
     };
   }
 
@@ -97,15 +96,10 @@ class Index extends Component {
     console.log(checkArr, checkPrice);
     if (checkArr.length > 0) {
       Taro.showToast({
-        title: "彩蛋即将到来~ ~",
+        title: "购买成功",
         icon: "none",
         duration: 1500
       });
-      setTimeout(() => {
-        this.setState({
-          isOpened: true
-        });
-      }, 2000);
     } else {
       Taro.showToast({
         title: "你还未选中购买商品",
@@ -124,12 +118,6 @@ class Index extends Component {
     });
     this.setState({
       list
-    });
-  };
-
-  onClose = () => {
-    this.setState({
-      isOpened: false
     });
   };
 
@@ -243,16 +231,6 @@ class Index extends Component {
                     </View>
                   </View>
                 </View>
-
-                {/*彩蛋~ ~*/}
-                <AtCurtain
-                  isOpened={this.state.isOpened}
-                  closeBtnPosition="top-right"
-                  onClose={this.onClose.bind(this)}
-                >
-                  <Image style="width:300px;height:300px" src={noMoney} />
-                </AtCurtain>
-                {/* 结束 */}
               </AtSwipeAction>
             );
           })}

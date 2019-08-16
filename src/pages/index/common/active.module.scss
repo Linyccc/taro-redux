@@ -1,0 +1,31 @@
+.active {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  padding: 16px 32px;
+  .active_left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    image {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  .active_swiper {
+    height: 100px;
+    padding-left: 16px;
+    .active_swiperItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .active_swiperText {
+        padding-left: 8px;
+        color: #999999;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+}

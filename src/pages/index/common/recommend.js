@@ -76,7 +76,7 @@ class Index extends Component {
     return (
       <View className="home-recommend">
         <View className="home-recommend__title">
-          <Text className="home-recommend__title-txt">为你推荐</Text>
+          <Text className="home-recommend__title-txt">--为你推荐--</Text>
         </View>
         <View className="home-recommend__list">{content}</View>
       </View>

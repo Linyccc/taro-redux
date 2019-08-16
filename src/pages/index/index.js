@@ -10,8 +10,9 @@ import {
 import { AtIcon, AtGrid, AtNoticebar } from "taro-ui";
 import HomeTitle from "@/components/HomeTitle";
 import Recommend from "./common/recommend.js";
+import Active from "./common/active.js";
+import Cards from "./common/cards.js";
 import styles from "./index.module.scss";
-import Empty from "@/components/Empty";
 import LoadDown from "@/components/LoadDown";
 import { connect } from "@tarojs/redux";
 import { queryRecommend } from "@/actions/counter";
@@ -116,7 +117,7 @@ class Index extends Component {
     if (list.length > 0) {
       recommend = <Recommend list={this.state.list} />;
     } else {
-      recommend = <Empty content="数据失联了~" />;
+      recommend = null;
     }
     return (
       <View>
@@ -191,13 +192,13 @@ class Index extends Component {
             }
           ]}
         />
-
         {/* <View className={styles.active}>
           <Image src={active} />
         </View> */}
+        <Active />
+        <Cards />
         {recommend}
         {showDown && <LoadDown status={status} />}
-        {/* <Recommend list={this.state.list} /> */}
       </View>
     );
   }
