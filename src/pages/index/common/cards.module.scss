@@ -4,25 +4,13 @@
   padding: 32px 16px;
   .cards_item1 {
     margin-right: 16px;
-    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/red.png");
+    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/card1.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
   .cards_item2 {
-    margin-right: 16px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/orange.png");
-  }
-  .cards_item3 {
-    margin-right: 16px;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/blue.png");
-  }
-  .cards_item4 {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/pink.png");
+    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/card2.png");
   }
 }
