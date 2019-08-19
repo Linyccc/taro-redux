@@ -1,6 +1,8 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, Button, Text, Image } from "@tarojs/components";
 import styles from "./cards.module.scss";
+import card1 from "@/assets/image/card1.png";
+import card2 from "@/assets/image/card2.png";
 
 class Index extends Component {
   constructor(props) {
@@ -21,8 +23,12 @@ class Index extends Component {
 
     return (
       <View className={styles.cards}>
-        <View className={styles.cards_item1} style={imageStyle} />
-        <View className={styles.cards_item2} style={imageStyle} />
+        <View style={"margin-right:8px"}>
+          <Image className={styles.cards_item} src={card1} style={imageStyle} />
+        </View>
+        <View>
+          <Image src={card2} style={imageStyle} className={styles.cards_item} />
+        </View>
       </View>
     );
   }

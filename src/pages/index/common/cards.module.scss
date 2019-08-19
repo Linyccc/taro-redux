@@ -2,15 +2,7 @@
   display: flex;
   flex-direction: row;
   padding: 32px 16px;
-  .cards_item1 {
-    margin-right: 16px;
-    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/card1.png");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  .cards_item2 {
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-image: url("https://raw.githubusercontent.com/Linyccc/taro-redux/master/src/assets/image/card2.png");
+  .cards_item {
+    border-radius: 8px;
   }
 }

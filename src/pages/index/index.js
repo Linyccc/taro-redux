@@ -12,6 +12,8 @@ import HomeTitle from "@/components/HomeTitle";
 import Recommend from "./common/recommend.js";
 import Active from "./common/active.js";
 import Cards from "./common/cards.js";
+import Likes from "./common/likes.js";
+import LikesOne from "./common/likesOne.js";
 import styles from "./index.module.scss";
 import LoadDown from "@/components/LoadDown";
 import { connect } from "@tarojs/redux";
@@ -197,6 +199,10 @@ class Index extends Component {
         </View> */}
         <Active />
         <Cards />
+        <HomeTitle title="每日必逛" />
+        <Likes />
+        <HomeTitle title="特色专享" />
+        <LikesOne />
         {recommend}
         {showDown && <LoadDown status={status} />}
       </View>

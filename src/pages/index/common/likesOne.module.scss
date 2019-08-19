@@ -1,0 +1,92 @@
+.likes {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  .likes_swiper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    .likes_swiper_item_left {
+      width: 150px;
+      padding: 16px;
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .title {
+        display: flex;
+        flex-direction: row;
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+      .desc {
+        font-size: 24px;
+        color: #999;
+        text-align: center;
+      }
+    }
+    .likes_swiper_item_right {
+      flex: 1;
+      .swiper {
+        height: 200px;
+        .swiper_item {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          .swiper_card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .swiper_card_image {
+              width: 100px;
+              height: 100px;
+            }
+            .swiper_card_text {
+              font-size: 24px;
+              color: #999;
+            }
+          }
+        }
+      }
+    }
+  }
+  .likes_pre {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .likes_pre_item:first-child {
+      border-right: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .likes_pre_item {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 16px;
+      .likes_pre_item_imageGroup {
+        display: flex;
+        flex-direction: row;
+        .likes_pre_item_image {
+          flex: 1;
+          .likes_pre_item_image_item {
+            width: 140px;
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+}
+.likes_title {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+.likes_desc {
+  font-size: 24px;
+  color: #999;
+  margin-bottom: 8px;
+}
