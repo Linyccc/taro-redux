@@ -28,10 +28,9 @@ class App extends Component {
       "pages/item/index"
     ],
     window: {
-      backgroundTextStyle: "light",
-      navigationBarBackgroundColor: "#fff",
-      navigationBarTitleText: "demo",
-      navigationBarTextStyle: "black"
+      navigationBarBackgroundColor: "#fff", //导航栏背景颜色
+      navigationBarTitleText: "demo", //导航栏标题文字内容
+      navigationBarTextStyle: "black" //导航栏标题颜色
     },
     tabBar: {
       color: "#8a8a8a",

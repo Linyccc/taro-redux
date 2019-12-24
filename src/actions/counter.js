@@ -61,7 +61,7 @@ export function queryData(params, showMask) {
 export function queryRecommend(params, showMask) {
   return dispatch => {
     request(
-      "https://easy-mock.com/mock/5d2bdbfe8f337566364f60b9/example/redux/recommend",
+      "https://www.fastmock.site/mock/9056598c637e6436a27fd4f0c3644f16/weixin/example/redux/recommend",
       {
         method: "get",
         data: params,

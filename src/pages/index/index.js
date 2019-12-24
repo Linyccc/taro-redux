@@ -24,6 +24,7 @@ import swiper3 from "../../assets/image/swiper3.jpg";
 
 class Index extends Component {
   config = {
+    backgroundTextStyle: "dark",
     navigationBarTitleText: "首页",
     enablePullDownRefresh: true
   };
@@ -36,7 +37,7 @@ class Index extends Component {
       },
       list: [],
       showMask: true, //初始化加载遮罩
-      status: "normal", // 1.normal:正常  2.notMoreData:没有更多数据见底   3.refreshing : 刷新状态     注:可把此数据放到全局进行引用
+      downStatus: "normal", // 1.normal:正常  2.notMoreData:没有更多数据见底   3.refreshing : 刷新状态     注:可把此数据放到全局进行引用
       showDown: false //只有在下拉的时候显示
     };
   }
@@ -46,7 +47,7 @@ class Index extends Component {
     const { params, showMask } = this.state;
     // 这个是异步的请求的时候进行Loading效果，为了防止上拉对loadDown可进行隐藏处理
     this.setState({
-      status: "refreshing"
+      downStatus: "refreshing"
     });
     dispatch(queryRecommend(params, showMask));
   }
@@ -69,14 +70,14 @@ class Index extends Component {
     }
     const curStatus = nextProps.list < 10 ? "notMoreData" : "normal";
     this.setState({
-      status: curStatus
+      downStatus: curStatus
     });
   }
 
   // 顶部下拉刷新，原生事件
   onPullDownRefresh() {
     let that = this;
-    const { params, status } = this.state;
+    const { params, downStatus } = this.state;
     this.setState(
       {
         params: {
@@ -87,16 +88,21 @@ class Index extends Component {
         showMask: false
       },
       () => {
-        that.getList();
+        that.pullDown().then(Taro.stopPullDownRefresh());
       }
     );
   }
 
+  //下拉的异步请求成功阻止刷新事件
+  async pullDown() {
+    let that = this;
+    await that.getList();
+  }
   // 滚动条拉到底部，原生事件
   onReachBottom() {
     const that = this;
-    const { params, status } = this.state;
-    if (status !== "notMoreData") {
+    const { params, downStatus } = this.state;
+    if (downStatus !== "notMoreData") {
       this.setState(
         {
           params: {
@@ -114,9 +120,10 @@ class Index extends Component {
   }
 
   render() {
-    const { list, showDown, status } = this.state;
+    const { list, showDown, downStatus } = this.state;
     let recommend = null;
     if (list.length > 0) {
+      // console.log(list);
       recommend = <Recommend list={this.state.list} />;
     } else {
       recommend = null;
@@ -204,7 +211,7 @@ class Index extends Component {
         <HomeTitle title="特色专享" />
         <LikesOne />
         {recommend}
-        {showDown && <LoadDown status={status} />}
+        {showDown && <LoadDown status={downStatus} />}
       </View>
     );
   }
